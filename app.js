@@ -19,13 +19,13 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }))
 
 
-app.get("/",(req,res)=>{
-    res.send(<h1>this is the home page working</h1>)
-})
-app.get("/health",(req,res)=>{
-    res.send(<h1>this is the health page working</h1>)
-})
+app.get("/", (req, res) => {
+    res.send("<h1>This is the home page</h1>");
+});
 
+app.get("/health", (req, res) => {
+    res.send("<h1>This is the health page</h1>");
+});
 
 app.use('/api/auth', authRouter);
 app.use('/api/form', contactRouter);
